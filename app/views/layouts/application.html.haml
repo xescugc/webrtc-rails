@@ -1,0 +1,26 @@
+!!! 5
+%html(lang="en")
+  %head
+    %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    %title= content_for?(:title) ? yield(:title) : "WebRTC Rails"
+    = csrf_meta_tags
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300", :rel => "stylesheet", :type => "text/css"}
+    / Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
+    = stylesheet_link_tag "application", :media => "all", "data-turbolinks-track" => true
+
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+
+
+  %body
+    = render partial: 'layouts/partials/header'
+    .row
+      %aside.col-md-4
+        .box-sidebar
+          = render partial: 'layouts/partials/sidebar'
+      .col-md-8
+        = yield
+
