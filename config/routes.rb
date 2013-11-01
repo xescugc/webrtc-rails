@@ -1,5 +1,6 @@
 WebrtcRails::Application.routes.draw do
   root to: 'home#index'
 
-  get '/step1' => 'home#step1'  
+  get '/webcam_audio_video' =>  'home#webcam_audio_video'  
+  get '/webrtc_same_page'   =>  'home#webrtc_same_page' 
 end
