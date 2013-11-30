@@ -9,4 +9,7 @@ class HomeController < ApplicationController
   def webrtc_same_page
   end
 
+  def stream_arbitrary_data
+  end
+
 end
