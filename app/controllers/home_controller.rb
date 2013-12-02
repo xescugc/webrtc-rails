@@ -12,4 +12,7 @@ class HomeController < ApplicationController
   def stream_arbitrary_data
   end
 
+  def client_to_client
+  end
+
 end
