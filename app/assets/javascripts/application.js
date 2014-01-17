@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require socket.io
-//= require_tree .
+//= require adapter.js

@@ -1,31 +1,31 @@
+%script{src: '/assets/rtc/client_signaling.js'}
 %h1 Client to Client
 
+%video#localVideo
+%video#remoteVideo
 :javascript
-  var isInitiator;
-
-  room = prompt("Enter room name:");
-
-  var socket = io.connect();
-
+  var pc = null
   if (room !== "") {
     console.log('Joining room ' + room);
     socket.emit('create or join', room);
   }
 
-  socket.on('full', function (room){
-    console.log('Room ' + room + ' is full');
-  });
+  var localVideo  = document.querySelector('#localVideo');
+  var remoteVideo = document.querySelector('#remoteVideo');
 
-  socket.on('empty', function (room){
-    isInitiator = true;
-    console.log('Room ' + room + ' is empty');
-  });
+  var constraints = 
+    {
+      video: true,
+      audio: true
+    }
 
-  socket.on('join', function (room){
-    console.log('Making request to join room ' + room);
-    console.log('You are the initiator!');
-  });
+  function gotError(error){
+    console.alert('Problems with GetUserMedia');
+  }
 
-  socket.on('log', function (array){
-    console.log.apply(console, array);
-  });
+  function gotStream(stream){
+    pc = new RTCPeerConnection(null);
+    pc.addStream(stream);
+    attachMediaStream(localVideo, stream);
+  }
+  getUserMedia(constraints, gotStream, gotError);
