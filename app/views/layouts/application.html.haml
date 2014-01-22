@@ -17,10 +17,7 @@
 
   %body
     = render partial: 'layouts/partials/header'
-    .row
-      %aside.col-md-4
-        .box-sidebar
-          = render partial: 'layouts/partials/sidebar'
-      .col-md-8
+    .container
+      .row
         = yield
 
