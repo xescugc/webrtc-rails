@@ -6,3 +6,9 @@ video {
   width: 100%    !important;
   height: auto   !important;
 }
+#localVideo {
+  z-index: 99;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

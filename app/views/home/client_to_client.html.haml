@@ -1,10 +1,11 @@
 %script{src: '/assets/rtc/client_signaling.js'}
-.row
-  %h1 Client to Client
-  .col-md-6
-    %video#localVideo{  "autoplay" => "", "muted" => "" }
-  .col-md-6
-    %video#remoteVideo{ "autoplay" => "",}
+.container
+  .row
+    #video-grid
+      .col-xs-12.col-md-12
+        %video#remoteVideo{ "autoplay" => "",}
+      .col-md-2.col-xs-2
+        %video#localVideo{  "autoplay" => "", "muted" => "" }
 :javascript
   var pc = null;
   var localStream;
