@@ -13,4 +13,13 @@ As I said before the main objective is to practice WebRTC but I will list some o
 5. Ability to activate and desactivate Video or Audio, and reactivate them 
 6. Room with more than 2 people
 7. Stream Data to more than 3 people (one to more only), like a conference
+8. Change the Rails server for more JS? (NodeJs with Backbone-Marionette ... jeje)
 
+##Collaborate
+
+You can participate with whatever you want, and use/fork this code (if you find it usefull) for whatever you want ofcourse. If you want to propose more ideas will be welcome jeje
+
+##Contact
+
+Francesc Gil
+  email: xescugil@gmail.com
