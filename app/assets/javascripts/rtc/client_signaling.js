@@ -1,4 +1,5 @@
-var socket = io.connect('192.168.1.25:2013');
+// var socket = io.connect('192.168.1.25:2013');
+var socket = io.connect('127.0.0.1:2013');
 
 var room = "room-name" //prompt("Enter room name:");
 
@@ -23,7 +24,7 @@ socket.on("message", function(data) {
     maybeStart();
   }else if (data.type === 'candidate' && isStarted) {
     var candidate = new RTCIceCandidate({
-      candidate: message.message
+      candidate: data.message.candidate
     });
     pc.addIceCandidate(candidate);  
   }else if (data.type === 'answer' && isStarted) {
