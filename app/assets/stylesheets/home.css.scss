@@ -6,9 +6,18 @@ video {
   width: 100%    !important;
   height: auto   !important;
 }
+
 #localVideo {
   z-index: 99;
   position: absolute;
   bottom: 0;
   right: 0;
+  border-color: #F0F8FF;
+  border-radius: 50%;
+  border-style: solid;
+}
+
+#js-chat-body {
+  max-height: 255px;
+  overflow: auto;
 }

@@ -6,8 +6,58 @@
         %video#remoteVideo{ "autoplay" => "",}
       .col-md-2.col-xs-2
         %video#localVideo{  "autoplay" => "", "muted" => "" }
+  .row
+    =# %textarea.form-control{ rows: 7 }
+    .panel.panel-primary
+      .panel-heading
+        Chat
+      .panel-body#js-chat-body
+    %br
+    .input-group
+      %input.form-control#js-input-im{ type: 'text', placeholder: 'Send a Message'}
+      %span.input-group-btn
+        %button.btn.btn-primary#js-send-button-im{ type: "button"}
+          Send
 :javascript
   var user_name = prompt("Your user name?");
+
+  var $sendButton = $("#js-send-button-im");
+  var $inputIM    = $("#js-input-im");
+  var $chatBody   = $("#js-chat-body");
+
+  $sendButton.on('click', sendIM);
+  $inputIM.on('keypress', checkEnterKey);
+
+  function sendIM() {
+    var content = $inputIM.val();
+    $inputIM.val("");
+    socket.emit('message',{message: {content: content, user: user_name}, type: 'im', room: room});
+  }
+
+  function checkEnterKey(event) {
+    if ( event.keyCode == 13 ) {
+      $sendButton.click();
+    }
+  }
+
+  function appendNewIM(user, message) {
+    $chatBody.prepend(mediaObjectIM(user, message));
+  }
+
+  function mediaObjectIM(user, message) {
+    var leftRight = user === user_name ? 'right' : 'left'
+    return "  <div class='media'>"+
+           "    <a class='pull-"+ leftRight +"' href='#'>"+
+           "      <img class='media-object' src='http://placehold.it/45x45'>"+
+           "    </a>"+
+           "    <div class='media-body', style='text-align: "+ leftRight +"'>"+
+           "      <h4 class='media-heading'>"+ user +"</h4>"+
+           "      "+ message +""+
+           "    </div>"+
+           "  </div>"
+  }
+  ///////////////////////////////////////////////////////////////////////////
+
   var pc = null;
   var localStream;
   var isStarted;

@@ -1,5 +1,5 @@
-var socket = io.connect('192.168.1.40:2013');
-// var socket = io.connect('127.0.0.1:2013');
+// var socket = io.connect('192.168.1.40:2013');
+var socket = io.connect('127.0.0.1:2013');
 
 var room = "room-name" //prompt("Enter room name:");
 
@@ -35,5 +35,7 @@ socket.on("message", function(data) {
     }   
     pc.setRemoteDescription(new RTCSessionDescription(data.message));
     startAnswer();
+  }else if (data.type === 'im') {
+    appendNewIM(data.message.user, data.message.content);
   }
 })
