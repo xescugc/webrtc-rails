@@ -7,6 +7,7 @@
       .col-md-2.col-xs-2
         %video#localVideo{  "autoplay" => "", "muted" => "" }
 :javascript
+  var user_name = prompt("Your user name?");
   var pc = null;
   var localStream;
   var isStarted;
