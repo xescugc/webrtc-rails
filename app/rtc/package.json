@@ -1,0 +1,21 @@
+{
+  "name": "webrtc-rails",
+  "version": 0.1,
+  "description": "a simple RT server with socket.io to suport the WebRTC client comunication of data",
+  "contributors": [
+    {
+      "name": "Francesc Gil",
+      "email": "xescugil@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XescuGC/webrtc-rails"
+  },
+  "dependencies": {
+    "socket.io": "0.9.16"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  }
+}
