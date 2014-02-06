@@ -16,6 +16,9 @@ As I said before the main objective is to practice WebRTC but I will list some o
 8. Stream Data to more than 3 people (one to more only), like a conference
 9. Change the Rails server for more JS? (NodeJs with Backbone-Marionette ... jeje)
 
+##Slides
+
+I've made a short Presentation of WebRTC in my Office, here are the [Slides](https://github.com/XescuGC/webrtc-slides)
 ##Collaborate
 
 You can participate with whatever you want, and use/fork this code (if you find it usefull) for whatever you want ofcourse. If you want to propose more ideas will be welcome jeje
