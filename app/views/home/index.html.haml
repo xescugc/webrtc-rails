@@ -1,4 +1,15 @@
 .jumbotron
   %h1.text-center Welcome to WebRTC-Rails
-  %p.text-center This is a simple app build to test WebRTC with in a Rails aplication
-  = link_to "Create your first Call!", client_to_client_path, class: 'btn btn-primary btn-large', role: 'button'
+  %p.text-center This is a simple app build to test WebRTC with in a Rails application
+  .form-group
+    = text_field_tag "room[name]", nil, palceholder: "Enter your room name"
+  =# link_to "Create your first Call-Room!", nil, class: 'btn btn-primary btn-large', role: 'button'
+
+:javascript
+
+  $("#room_name").on("keypress", function(event) {
+    console.log(this.value);
+    if (event.keyCode === 13){
+      window.location = window.location + this.value;
+    }
+  })
