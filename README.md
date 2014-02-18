@@ -2,7 +2,7 @@
 
 This is a basic aplication I have build to test WebRTC, my main objective is to practice WebRTC. I will slowly improve the aplication, and add more features each time.
 
-#Start Now
+##Start Now
 
 To start the project and test is at your own you have to do the following:
 
@@ -38,6 +38,6 @@ You can participate with whatever you want, and use/fork this code (if you find 
 
 ##Contact
 
-Francesc Gil
+email: xescugil@gmail.com
 
-  email: xescugil@gmail.com
+twitter: [@xescugc](https://twitter.com/xescugc)
