@@ -12,13 +12,14 @@ As I said before the main objective is to practice WebRTC but I will list some o
 4. Control of errors in the Call (on of the Peers leave ... etc)
 5. **DONE** Ability to create your own rooms with diferets names, and to setup an user name (for the Chat)
 6. Ability to activate and desactivate Video or Audio, and reactivate them 
-7. Room with more than 2 people
+7. Room with more than 2 Peers
 8. Stream Data to more than 3 people (one to more only), like a conference
-9. Change the Rails server for more JS? (NodeJs with Backbone-Marionette ... jeje)
+9. Change the Rails server for more JS? (NodeJs with Backbone.Marionette ... jeje)
 
 ##Slides
 
 I've made a short Presentation of WebRTC in my Office, here are the [Slides](https://github.com/XescuGC/webrtc-slides)
+
 ##Collaborate
 
 You can participate with whatever you want, and use/fork this code (if you find it usefull) for whatever you want ofcourse. If you want to propose more ideas will be welcome jeje
