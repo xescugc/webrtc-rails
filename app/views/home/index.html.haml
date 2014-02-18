@@ -1,21 +1,38 @@
 .jumbotron
-  %h1.text-center Welcome to WebRTC-Rails
-  %p.text-center This is a simple app build to test WebRTC with in a Rails application
-  .form-group
+  %h1.text-center 
+    Welcome to WebRTC-Rails
+    %small
+      by Francesc Gil
+  %p.text-center This is a simple app creted to test WebRTC with in a Rails application
+  %center.form-group
+    Enter your room name:
     = text_field_tag "room[name]", nil, palceholder: "Enter your room name"
     = link_to "Create your first Call-Room!", "#", class: 'btn btn-success btn-large', role: 'button', id: "btn-room"
 
 :javascript
+  
+  $roomField = $("#room_name");
 
   var redirectToRoom = function(event) {
-    console.log(this.value);
-    if (isNaN(this.value)){
-      alert("You have to set the name of the ROOM");
-    }else if (event.keyCode === 13){
-      window.location = window.location + this.value;
+    console.log($roomField.val());
+    window.test_field = $roomField;
+    if (event.type === "click"){
+      if ($roomField.val() === ""){
+        alert("You have to set the name of the ROOM");
+      }else{
+        window.location = window.location.pathname + $roomField.val();
+      }
+    } else if (event.type === "keypress"){
+      if (event.keyCode === 13){
+        if ($roomField.val() === ""){
+          alert("You have to set the name of the ROOM");
+        } else {
+          window.location = window.location.pathname + $roomField.val();
+        }
+      }
     }
   }
 
   $("#room_name").on("keypress", redirectToRoom);
-  $("#btn-room").on("click press", redirectToRoom);
+  $("#btn-room").on("click", redirectToRoom);
 

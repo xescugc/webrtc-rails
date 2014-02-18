@@ -1,4 +1,4 @@
-var socket = io.connect('192.168.1.25:2013');
+var socket = io.connect('192.168.1.33:2013');
 // var socket = io.connect('127.0.0.1:2013');
 
 // var room = "room-name" //prompt("Enter room name:");
