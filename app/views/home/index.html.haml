@@ -3,13 +3,19 @@
   %p.text-center This is a simple app build to test WebRTC with in a Rails application
   .form-group
     = text_field_tag "room[name]", nil, palceholder: "Enter your room name"
-  =# link_to "Create your first Call-Room!", nil, class: 'btn btn-primary btn-large', role: 'button'
+    = link_to "Create your first Call-Room!", "#", class: 'btn btn-success btn-large', role: 'button', id: "btn-room"
 
 :javascript
 
-  $("#room_name").on("keypress", function(event) {
+  var redirectToRoom = function(event) {
     console.log(this.value);
-    if (event.keyCode === 13){
+    if (isNaN(this.value)){
+      alert("You have to set the name of the ROOM");
+    }else if (event.keyCode === 13){
       window.location = window.location + this.value;
     }
-  })
+  }
+
+  $("#room_name").on("keypress", redirectToRoom);
+  $("#btn-room").on("click press", redirectToRoom);
+
