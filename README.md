@@ -2,6 +2,18 @@
 
 This is a basic aplication I have build to test WebRTC, my main objective is to practice WebRTC. I will slowly improve the aplication, and add more features each time.
 
+#Start Now
+
+To start the project and test is at your own you have to do the following:
+
+1. Clone the repo: ```git clone git@github.com:XescuGC/webrtc-rails.git```
+2. Install all the gems with ```bundle install```
+3. Check to see your IP: ```ifconfig```, copy the IP and change the ones in ```app/assets/javascripts/rtc/client_signaling.js``` and at the first line change the ```io.connect('YOUR-IP:2013')```
+4. Open the server ```rails server```
+5. Open the NodeJs server ```node app/rtc/server.js```
+6. Go to the URL: ```localhost:3000```
+7. ENJOY!
+
 ##Objectives
 
 As I said before the main objective is to practice WebRTC but I will list some of the other objectives I have in mind:
