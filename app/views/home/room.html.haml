@@ -18,6 +18,8 @@
       %span.input-group-btn
         %button.btn.btn-primary#js-send-button-im{ type: "button"}
           Send
+  %button.btn.btn-error#js-hangup{ type: "button"}
+    Hang Up
 :javascript
   var user_name = prompt("Your user name?");
 
@@ -116,6 +118,22 @@
   // Get User Media
   getUserMedia(constraints, gotStream, gotError);
 
+  // Stop the PeerConnection when the you leave the window
+  function stop() {
+    pc.close();
+    pc = null;
+    attachMediaStream(remoteVideo, null);
+  }
+
+  $("#js-hangup").on("click", function () {
+    stop();
+  });
+
+  window.onbeforeunload = function() {
+    stop();
+    socket.emit('message', {type: 'by', room: room});
+  }
+
   // Try to start, initiates the RTCPeerConnection
   function maybeStart() {
     if (isChannelReady && !isStarted && typeof localStream != 'undefined'){
@@ -176,3 +194,4 @@
     pc.setLocalDescription(answer); 
     socket.emit('message', {room: room, type: 'answer', message: answer})
   }
+
