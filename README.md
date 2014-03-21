@@ -8,11 +8,12 @@ To start the project and test is at your own you have to do the following:
 
 1. Clone the repo: ```git clone git@github.com:XescuGC/webrtc-rails.git```
 2. Install all the gems with ```bundle install```
-3. Check to see your IP: ```ifconfig```, copy the IP and change the ones in ```app/assets/javascripts/rtc/client_signaling.js``` and at the first line change the ```io.connect('YOUR-IP:2013')```
-4. Open the server ```rails server```
-5. Open the NodeJs server ```node app/rtc/server.js```
-6. Go to the URL: ```localhost:3000```
-7. ENJOY!
+3. Go to ```app/rtc/``` and run ```npm install``` to install ```socket.io```
+4. Check to see your IP: ```ifconfig```, copy the IP and change the ones in ```app/assets/javascripts/rtc/client_signaling.js``` and at the first line change the ```io.connect('YOUR-IP:2013')```
+5. Open the server ```rails server```
+6. Open the NodeJs server ```node app/rtc/server.js```
+7. Go to the URL: ```localhost:3000```
+8. ENJOY!
 
 ##Objectives
 
