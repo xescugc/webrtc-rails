@@ -44,13 +44,17 @@ if (navigator.mozGetUserMedia) {
     console.log("Attaching media stream", stream);
     window.varRemoteStream = stream;
     element.mozSrcObject = stream;
-    element.play();
+    setTimeout(function() {
+      element.play();
+    },500)
   };
 
   reattachMediaStream = function(to, from) {
     console.log("Reattaching media stream");
     to.mozSrcObject = from.mozSrcObject;
-    to.play();
+    setTimeout(function() {
+      element.play();
+    },500)
   };
 
   // Fake get{Video,Audio}Tracks

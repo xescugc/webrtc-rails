@@ -25,7 +25,8 @@ socket.on("message", function(data) {
     maybeStart();
   }else if (data.type === 'candidate' && isStarted) {
     var candidate = new RTCIceCandidate({
-      candidate: data.message.candidate
+      candidate: data.message.candidate,
+      sdpMLineIndex:  data.message.sdpMLineIndex
     });
     pc.addIceCandidate(candidate);  
   }else if (data.type === 'answer' && isStarted) {

@@ -15,6 +15,13 @@ To start the project and test is at your own you have to do the following:
 7. Go to the URL: ```localhost:3000```
 8. ENJOY!
 
+##Test it in production
+
+Here you have the [link](webrtc-rails.layeris.com)
+
+**At the moment it only works between Chrome and Chrome (I'm currently working on the problem)**
+
+
 ##Objectives
 
 As I said before the main objective is to practice WebRTC but I will list some of the other objectives I have in mind:
