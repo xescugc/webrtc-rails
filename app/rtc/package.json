@@ -1,6 +1,6 @@
 {
   "name": "webrtc-rails",
-  "version": 0.1,
+  "version": "0.0.1",
   "description": "a simple RT server with socket.io to suport the WebRTC client comunication of data",
   "contributors": [
     {
