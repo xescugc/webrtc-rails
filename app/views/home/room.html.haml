@@ -127,6 +127,7 @@
 
   $("#js-hangup").on("click", function () {
     stop();
+    socket.emit('message', {type: 'by', room: room});
   });
 
   window.onbeforeunload = function() {
