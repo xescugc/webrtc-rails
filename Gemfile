@@ -2,10 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.0'
 gem 'thin'
-gem 'mongoid', github: 'mongoid/mongoid'
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-  :github => 'anjlab/bootstrap-rails',
-  :branch => '3.0.0'
+gem 'mongoid'
+gem 'bootstrap-sass', '~> 3.1.1'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'bson_ext'
