@@ -17,7 +17,7 @@ To start the project and test is at your own you have to do the following:
 
 ##Test it in production
 
-Here you have the [link](webrtc-rails.layeris.com)
+Here you have the [link](http://webrtc-rails.layeris.com)
 
 **At the moment it only works between Chrome and Chrome (I'm currently working on the problem)**
 
