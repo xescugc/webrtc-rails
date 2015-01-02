@@ -29,12 +29,12 @@ As I said before the main objective is to practice WebRTC but I will list some o
 1. **DONE** WebRTC between 2 peers
 2. **DONE** Clean the webpage of unneeded menus, just the Home page and a page to call
 3. **DONE** Add a chat module (with NodeJs, latter can be improved to be with arbitrary data with RTCDataChannel)
-4. Control of errors in the Call (on of the Peers leave ... etc)
-5. **DONE** Ability to create your own rooms with diferets names, and to setup an user name (for the Chat)
-6. Ability to activate and desactivate Video or Audio, and reactivate them 
-7. Room with more than 2 Peers
-8. Stream Data to more than 3 people (one to more only), like a conference
-9. Change the Rails server for more JS? (NodeJs with Backbone.Marionette ... jeje)
+4. Change the NodeJS server to a native Ruby (EventMachine)
+5. Control of errors in the Call (on of the Peers leave ... etc)
+6. **DONE** Ability to create your own rooms with diferets names, and to setup an user name (for the Chat)
+7. Ability to activate and desactivate Video or Audio, and reactivate them 
+8. Room with more than 2 Peers
+9. Change the Chat from NodeJS to WebRTC DataChannel
 
 ##Slides
 
