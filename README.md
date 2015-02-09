@@ -1,5 +1,7 @@
 #WebRTC Rails
 
+[![Join the chat at https://gitter.im/XescuGC/webrtc-rails](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/XescuGC/webrtc-rails?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is a basic aplication I have build to test WebRTC, my main objective is to practice WebRTC. I will slowly improve the aplication, and add more features each time.
 
 ##Start Now
