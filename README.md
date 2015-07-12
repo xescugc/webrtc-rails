@@ -21,7 +21,9 @@ To start the project and test is at your own you have to do the following:
 
 Here you have the [link](http://webrtc-rails.layeris.com)
 
-**At the moment it only works between Chrome and Chrome (I'm currently working on the problem)**
+~~**At the moment it only works between Chrome and Chrome (I'm currently working on the problem)**~~
+
+Now it works on Chrome and Firefox. Maybe there was some bug on the API.
 
 
 ##Objectives
