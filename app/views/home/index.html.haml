@@ -10,12 +10,10 @@
     = link_to "Create your first Call-Room!", "#", class: 'btn btn-success btn-large', role: 'button', id: "btn-room"
 
 :javascript
-  
+
   $roomField = $("#room_name");
 
   var redirectToRoom = function(event) {
-    console.log($roomField.val());
-    window.test_field = $roomField;
     if (event.type === "click"){
       if ($roomField.val() === ""){
         alert("You have to set the name of the ROOM");
