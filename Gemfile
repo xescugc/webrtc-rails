@@ -22,7 +22,7 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'gettext', '>=1.9.3', :require => false
   gem 'capistrano'
-  gem 'rvm-capistrano'
+  gem 'rvm-capistrano', require: false
 end
 
 gem 'unicorn'
